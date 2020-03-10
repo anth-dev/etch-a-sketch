@@ -58,6 +58,7 @@ header {
     /* boltdesignsystem indigo, dark */
     background-color: #161A3C;
     display: flex;
+    align-items: center;
     min-height: 130px;
 }
 
