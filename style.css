@@ -6,7 +6,12 @@ html, body {
 header {
     /* boltdesignsystem indigo, dark */
     background-color: #161A3C;
-    height: 50px;
+    display: flex;
+    /* height: 50px; */
+}
+
+header img {
+    padding: 10px;
 }
 
 body {
@@ -31,4 +36,5 @@ main {
 h1 {
     color: white;
     font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
 }
