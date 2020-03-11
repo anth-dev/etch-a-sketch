@@ -66,14 +66,28 @@ header img {
     padding: 10px;
 }
 
+header button {
+    position: absolute;
+    left: 75%;
+    border-radius: 3px;
+    background-color: #1F2656;
+    border: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 100px;
+    height: 50px;
+}
+
 body {
     /* boltdesignsystem indigo, xdark */
     background-color: #060923;
 }
 
 .container {
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 600px;
     /* boltdesignsystem indigo, dark */
     background-color: #161A3C
 }
