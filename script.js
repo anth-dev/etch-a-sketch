@@ -12,17 +12,21 @@ clearButton.addEventListener("click", handleClick);
 
 function handleClick() {
     rowsAndColumns = +prompt('How many rows and columns?');
-    generateDivs(rowsAndColumns);
+    generateGrid(rowsAndColumns);
 }
 
-function generateDivs(rowsAndColumns) {
+function generateGrid(rowsAndColumns) {
+    generateRows(rowsAndColumns);
+    // generateCells(rowsAndColumns);
+}
+
+function generateRows(rowsAndColumns) {
     container.innerHTML = '';
-    console.log('generating ' + rowsAndColumns + ' rows and columns');
-    for (i = 0; i < rowsAndColumns * rowsAndColumns; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        container.appendChild(cell);
+    for (i = 0; i < rowsAndColumns; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+        container.appendChild(row);
     }
 }
 
-generateDivs(rowsAndColumns);
+generateGrid(rowsAndColumns);
