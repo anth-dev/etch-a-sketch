@@ -1,6 +1,6 @@
 let clearButton = document.querySelector('header button');
 let container = document.querySelector('.container');
-let rowsAndColumns = '10';
+let rowsAndColumns = +prompt('How many rows and columns?');
 
 clearButton.addEventListener("mouseenter", button => {
     clearButton.classList.add('overButton');
