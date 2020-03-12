@@ -1,5 +1,6 @@
 let clearButton = document.querySelector('header button');
-let rowsAndColumns = '100';
+let container = document.querySelector('.container');
+let rowsAndColumns = '10';
 
 clearButton.addEventListener("mouseenter", button => {
     clearButton.classList.add('overButton');
@@ -15,8 +16,13 @@ function handleClick() {
 }
 
 function generateDivs(rowsAndColumns) {
+    container.innerHTML = '';
     console.log('generating ' + rowsAndColumns + ' rows and columns');
-    for (i = 0; i <= rowsAndColumns * rowsAndColumns; )
+    for (i = 0; i < rowsAndColumns * rowsAndColumns; i++) {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        container.appendChild(cell);
+    }
 }
 
 generateDivs(rowsAndColumns);

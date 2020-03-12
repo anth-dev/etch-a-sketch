@@ -93,6 +93,10 @@ body {
 .container {
     width: 600px;
     height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     /* boltdesignsystem indigo, dark */
     background-color: #161A3C
 }
@@ -109,4 +113,11 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 4em;
     font-weight: bolder;
+}
+
+.cell {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border: solid 2px black;
 }
