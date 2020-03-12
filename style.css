@@ -94,11 +94,16 @@ body {
     width: 600px;
     height: 600px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     /* boltdesignsystem indigo, dark */
     background-color: #161A3C
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
 }
 
 main {
@@ -117,7 +122,6 @@ h1 {
 
 .cell {
     background-color: white;
-    width: 25px;
-    height: 25px;
+    flex-grow: 1;
     border: solid 2px black;
 }
