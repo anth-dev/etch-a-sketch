@@ -17,7 +17,7 @@ function handleClick() {
 
 function generateGrid(rowsAndColumns) {
     generateRows(rowsAndColumns);
-    // generateCells(rowsAndColumns);
+    generateCells(rowsAndColumns);
 }
 
 function generateRows(rowsAndColumns) {
@@ -27,6 +27,17 @@ function generateRows(rowsAndColumns) {
         row.classList.add('row');
         container.appendChild(row);
     }
+}
+
+function generateCells(rowsAndColumns) {
+    const rows = document.querySelectorAll('.row');
+    rows.forEach(row => {
+        for (i = 0; i < rowsAndColumns; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.appendChild(cell); 
+        }
+    });
 }
 
 generateGrid(rowsAndColumns);
