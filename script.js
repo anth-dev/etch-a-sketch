@@ -1,6 +1,6 @@
 let clearButton = document.querySelector('header button');
 let container = document.querySelector('.container');
-let rowsAndColumns = +prompt('How many rows and columns?');
+let rowsAndColumns = 50;
 
 clearButton.addEventListener("mouseenter", button => {
     clearButton.classList.add('overButton');
@@ -11,13 +11,14 @@ clearButton.addEventListener("mouseleave", button => {
 clearButton.addEventListener("click", handleClick);
 
 function handleClick() {
-    rowsAndColumns = +prompt('How many rows and columns?');
+    rowsAndColumns = +prompt('How many rows and columns? Tip: Try 50.');
     generateGrid(rowsAndColumns);
 }
 
 function generateGrid(rowsAndColumns) {
     generateRows(rowsAndColumns);
     generateCells(rowsAndColumns);
+    cellEventListener();
 }
 
 function generateRows(rowsAndColumns) {
@@ -44,11 +45,13 @@ function draw(cell) {
     console.log(cell);
 }
 
-generateGrid(rowsAndColumns);
+function cellEventListener() {
+    let cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.addEventListener("mouseover", function(){
+            cell.style.backgroundColor = '#545DA6';
+        })
+    });    
+}
 
-let cells = document.querySelectorAll('.cell');
-cells.forEach(cell => {
-    cell.addEventListener("mouseover", function(){
-        cell.style.backgroundColor = '#545DA6';
-    })
-});
+generateGrid(rowsAndColumns);
