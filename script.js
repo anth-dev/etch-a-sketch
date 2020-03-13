@@ -40,4 +40,15 @@ function generateCells(rowsAndColumns) {
     });
 }
 
+function draw(cell) {
+    console.log(cell);
+}
+
 generateGrid(rowsAndColumns);
+
+let cells = document.querySelectorAll('.cell');
+cells.forEach(cell => {
+    cell.addEventListener("mouseover", function(){
+        cell.style.backgroundColor = '#545DA6';
+    })
+});

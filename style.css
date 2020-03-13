@@ -90,6 +90,18 @@ body {
     background-color: #060923;
 }
 
+.backdrop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+    height: 620px;
+    background-color: green;
+    /* boltdesignsystem indigo, dark */
+    background-color: #161A3C
+}
+
 .container {
     width: 600px;
     height: 600px;
@@ -97,8 +109,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    /* boltdesignsystem indigo, dark */
-    background-color: #161A3C
 }
 
 .row {
@@ -121,7 +131,8 @@ h1 {
 }
 
 .cell {
-    background-color: white;
     flex-grow: 1;
-    border: solid 2px black;
+    border: solid 1px #161A3C;
+    /* boltdesignsystem indigo, xdark */
+    background-color: #060923;
 }
