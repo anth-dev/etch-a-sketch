@@ -48,8 +48,9 @@ function draw(cell) {
 function draw() {
     let cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
+        let baseAlpha = 0;
         cell.addEventListener("mouseover", function(){
-            cell.style.backgroundColor = '#545DA6';
+            cell.style.backgroundColor = 'rgba(256,256,256, ' + `${baseAlpha += 0.1}` + ')';
         })
     });    
 }
