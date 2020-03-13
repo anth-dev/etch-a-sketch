@@ -50,7 +50,7 @@ function draw() {
     cells.forEach(cell => {
         let baseAlpha = 0;
         cell.addEventListener("mouseover", function(){
-            cell.style.backgroundColor = 'rgba(256,256,256, ' + `${baseAlpha += 0.1}` + ')';
+            cell.style.backgroundColor = 'rgba(171,179,242, ' + `${baseAlpha += 0.1}` + ')';
         })
     });    
 }
