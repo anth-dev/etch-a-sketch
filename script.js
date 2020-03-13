@@ -18,7 +18,7 @@ function handleClick() {
 function generateGrid(rowsAndColumns) {
     generateRows(rowsAndColumns);
     generateCells(rowsAndColumns);
-    cellEventListener();
+    draw();
 }
 
 function generateRows(rowsAndColumns) {
@@ -45,7 +45,7 @@ function draw(cell) {
     console.log(cell);
 }
 
-function cellEventListener() {
+function draw() {
     let cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
         cell.addEventListener("mouseover", function(){
