@@ -134,4 +134,5 @@ h1 {
     border: solid 1px #161A3C;
     /* boltdesignsystem indigo, xdark */
     background-color: #060923;
+    transition: .5s;
 }
